@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TRIVIA</title>
+
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  
+</head>
+
+<body>
+
+  <button id="start-button">Start Game</button>
+  <div class="game">
+
+  <div class="container">
+  	<div class="row">
+  	  <div class="col-md-12">
+  		  <h1>TRIVIA</h1>
+  	  </div>
+  	</div>	
+  </div>
+
+  <div class="container">
+  	<div class="row">
+  	  <div class="col-md-12">
+  		  <h2>Time Remaining: <span id= "time-remaining"></span></h2>
+  	  </div>
+  	</div>	
+  </div>
+
+ <div class="container">
+  	<div class="row">
+  	  <div class="col-md-12">
+  		  <h3>Question 1</h3>
+  	  </div>
+  	</div>	
+  </div>
+
+  <div class="container">
+  	<div class="row">
+  	  <div class="col-md-12">
+  		  <ul>
+  		  	<li class="button">ANSWER1</li>
+  		  	<li class="button">Right ANSWER2</li>
+  		  	<li class="button">ANSWER3</li>
+  		  	<li class="button">ANSWER4</li>
+  		  </ul>
+  	  </div>
+  	</div>	
+  </div> 
+
+  <div class="container">
+  	<div class="row">
+  	  <div class="col-md-12">
+  		  <h3>Question 2</h3>
+  	  </div>
+  	</div>	
+  </div>
+
+  <div class="container">
+  	<div class="row">
+  	  <div class="col-md-12">
+  		  <ul>
+  		  	<li class="button">ANSWER1</li>
+  		  	<li class="button">ANSWER2</li>
+  		  	<li class="button">Right ANSWER3</li>
+  		  	<li class="button">ANSWER4</li>
+  		  </ul>
+  	  </div>
+  	</div>	
+  </div> 
+
+  <div class="container">
+  	<div class="row">
+  	  <div class="col-md-12">
+  		  <h3>Question 3</h3>
+  	  </div>
+  	</div>	
+  </div>
+
+  <div class="container">
+  	<div class="row">
+  	  <div class="col-md-12">
+  		  <ul>
+  		  	<li class="button">Right ANSWER1</li>
+  		  	<li class="button">ANSWER2</li>
+  		  	<li class="button">ANSWER3</li>
+  		  	<li class="button">ANSWER4</li>
+  		  </ul>
+  	  </div>
+  	</div>	
+  </div>
+
+  <div class="container">
+  	<div class="row">
+  	  <div class="col-md-12">
+  		  <h3>Question 4</h3>
+  	  </div>
+  	</div>	
+  </div>
+
+  <div class="container">
+  	<div class="row">
+  	  <div class="col-md-12">
+  		  <ul>
+  		  	<li class="button">ANSWER1</li>
+  		  	<li class="button">ANSWER2</li>
+  		  	<li class="button">ANSWER3</li>
+  		  	<li class="button">Right ANSWER4</li>
+  		  </ul>
+  	  </div>
+  	</div>	
+  </div> 
+
+  <div class="container">
+  	<div class="row">
+  	  <div class="col-md-12">
+  		  <h3>Question 5</h3>
+  	  </div>
+  	</div>	
+  </div>
+
+  <div class="container">
+  	<div class="row">
+  	  <div class="col-md-12">
+  		  <ul>
+  		  	<li class="button">ANSWER1</li>
+  		  	<li class="button">Right ANSWER2</li>
+  		  	<li class="button">ANSWER3</li>
+  		  	<li class="button">ANSWER4</li>
+  		  </ul>
+  	  </div>
+  	</div>	
+  </div>
+
+
+
+  </div>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+// $(document).ready(function() {
+
+  var time = 30;
+
+  var intervalId;
+
+  $("#start-button").on("click", startGame);
+    console.log("start");
+
+    
+  function startGame() {
+  	stop();
+  	intervalId = setInterval(decrement, 1000);
+  	console.log("startGame");
+
+  }
+
+  function decrement() {
+
+      time--;
+
+      $("#time-remaining").html(time);
+
+      if (time === 0) {
+
+        stop();
+
+        alert("Time Up!");
+  }}
+
+  //stop function to stop the timer and take user to final page
+  function stop() {
+
+      clearInterval(intervalId);
+      console.log(intervalId);
+  }
+
+</script>
+
+
+
+</body>
+</html>
