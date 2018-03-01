@@ -12,176 +12,116 @@
 
 <body>
 
-  <button id="start-button">Start Game</button>
-  <div class="game">
-
-  <div class="container">
+	  <div class="title">
   	<div class="row">
   	  <div class="col-md-12">
-  		  <h1>TRIVIA</h1>
+  		  <h1>GOAT TRIVIA</h1>
   	  </div>
   	</div>	
   </div>
 
+  <div class="start-game cointainer">
+  	<button id="start-button">Start Game</button>
+  </div>
+  
+  <!-- game play container -->
+  <div class="game-container">
+
   <div class="container">
   	<div class="row">
   	  <div class="col-md-12">
-  		  <h2>Time Remaining: <span id= "time-remaining"></span></h2>
+  		  <h2>Time Remaining: <span id= "time-remaining"></span>30</h2>
   	  </div>
   	</div>	
   </div>
+	
+<div class="row">
+			<div class="col-md-12">
+				<div class="questions">
+					<h3> 1. How high can a goat jump?</h3>
+				</div>
+				<div class="answers">
+					<!-- correct answer: 5+ feet -->
+					<input type="radio" name="q1" value="18+ inches">18+ inches
+					<input type="radio" name="q1" value="3+ feet">3+ feet
+					<input type="radio" name="q1" value="5+ feet">5+ feet
+					<input type="radio" name="q1" value="8+ feet">8+ feet
+				</div>
+			</div>
+		</div>
 
- <div class="container">
-  	<div class="row">
-  	  <div class="col-md-12">
-  		  <h3>Question 1</h3>
-  	  </div>
-  	</div>	
+		<div class="row">
+			<div class="col-md-12">
+				<div class="questions">
+					<h3> 2. Goats are naturally missing which of the following body part?</h3>
+				</div>
+				<div class="answers">
+					<!-- correct answer: Upper teeth -->
+					<input type="radio" name="q2" value="Sternum">Sternum
+					<input type="radio" name="q2" value="Spleen">Spleen
+					<input type="radio" name="q2" value="Upper teeth">Upper teeth
+					<input type="radio" name="q2" value="Knees">Knees
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="questions">
+					<h3> 3. A group of goats is commonly known as what?</h3>
+				</div>
+				<div class="answers">
+					<!-- correct answer: All of the above -->
+					<input type="radio" name="q3" value="A herd">A herd
+					<input type="radio" name="q3" value="A tribe">A tribe
+					<input type="radio" name="q3" value="A trip">A trip
+					<input type="radio" name="q3" value="All of the above">All of the above
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="questions">
+					<h3> 4. By examining which physical feature can you determine a goat's age?</h3>
+				</div>
+				<div class="answers">
+					<!-- correct answer: Teeth -->
+					<input type="radio" name="q4" value="Teeth">Teeth
+					<input type="radio" name="q4" value="Horns">Horns
+					<input type="radio" name="q4" value="Hooves">Hooves
+					<input type="radio" name="q4" value="Pupils">Pupils
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="questions">
+					<h3> 5. According to legend, goats were the first animals to discover which crop?</h3> 
+				</div>
+				<div class="answers">
+						<!-- correct answer: coffee -->
+					<input type="radio" name="q5" value="opium">Opium
+					<input type="radio" name="q5" value="peanuts">Peanuts
+					<input type="radio" name="q5" value="portabello mushrooms">Portabello mushrooms
+					<input type="radio" name="q5" value="coffee">Coffee
+				</div>
+			</div>
+		</div>
+ 
   </div>
 
-  <div class="container">
-  	<div class="row">
-  	  <div class="col-md-12">
-  		  <ul>
-  		  	<li class="button">ANSWER1</li>
-  		  	<li class="button">Right ANSWER2</li>
-  		  	<li class="button">ANSWER3</li>
-  		  	<li class="button">ANSWER4</li>
-  		  </ul>
-  	  </div>
-  	</div>	
-  </div> 
-
-  <div class="container">
-  	<div class="row">
-  	  <div class="col-md-12">
-  		  <h3>Question 2</h3>
-  	  </div>
-  	</div>	
+  <div class="end-container">
+  	<h1> Results:</h1>
+  	<h3> Correct Answers: <span id="correct-answers">0</span></h3>
+  	<h3> Incorrect Answers: <span: id="incorrect-answers">0</span:></h3>
+  	<h3> Unanswered Questions: <span id="unanswered">0</span></h3>
   </div>
 
-  <div class="container">
-  	<div class="row">
-  	  <div class="col-md-12">
-  		  <ul>
-  		  	<li class="button">ANSWER1</li>
-  		  	<li class="button">ANSWER2</li>
-  		  	<li class="button">Right ANSWER3</li>
-  		  	<li class="button">ANSWER4</li>
-  		  </ul>
-  	  </div>
-  	</div>	
-  </div> 
-
-  <div class="container">
-  	<div class="row">
-  	  <div class="col-md-12">
-  		  <h3>Question 3</h3>
-  	  </div>
-  	</div>	
-  </div>
-
-  <div class="container">
-  	<div class="row">
-  	  <div class="col-md-12">
-  		  <ul>
-  		  	<li class="button">Right ANSWER1</li>
-  		  	<li class="button">ANSWER2</li>
-  		  	<li class="button">ANSWER3</li>
-  		  	<li class="button">ANSWER4</li>
-  		  </ul>
-  	  </div>
-  	</div>	
-  </div>
-
-  <div class="container">
-  	<div class="row">
-  	  <div class="col-md-12">
-  		  <h3>Question 4</h3>
-  	  </div>
-  	</div>	
-  </div>
-
-  <div class="container">
-  	<div class="row">
-  	  <div class="col-md-12">
-  		  <ul>
-  		  	<li class="button">ANSWER1</li>
-  		  	<li class="button">ANSWER2</li>
-  		  	<li class="button">ANSWER3</li>
-  		  	<li class="button">Right ANSWER4</li>
-  		  </ul>
-  	  </div>
-  	</div>	
-  </div> 
-
-  <div class="container">
-  	<div class="row">
-  	  <div class="col-md-12">
-  		  <h3>Question 5</h3>
-  	  </div>
-  	</div>	
-  </div>
-
-  <div class="container">
-  	<div class="row">
-  	  <div class="col-md-12">
-  		  <ul>
-  		  	<li class="button">ANSWER1</li>
-  		  	<li class="button">Right ANSWER2</li>
-  		  	<li class="button">ANSWER3</li>
-  		  	<li class="button">ANSWER4</li>
-  		  </ul>
-  	  </div>
-  	</div>	
-  </div>
-
-
-
-  </div>
-
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script type="text/javascript">
-
-// $(document).ready(function() {
-
-  var time = 30;
-
-  var intervalId;
-
-  $("#start-button").on("click", startGame);
-    console.log("start");
-
-    
-  function startGame() {
-  	stop();
-  	intervalId = setInterval(decrement, 1000);
-  	console.log("startGame");
-
-  }
-
-  function decrement() {
-
-      time--;
-
-      $("#time-remaining").html(time);
-
-      if (time === 0) {
-
-        stop();
-
-        alert("Time Up!");
-  }}
-
-  //stop function to stop the timer and take user to final page
-  function stop() {
-
-      clearInterval(intervalId);
-      console.log(intervalId);
-  }
-
-</script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	
+  <script src="assets/javascript/app.js"></script>
 
 
 

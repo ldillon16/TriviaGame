@@ -4,7 +4,7 @@
   <title>TRIVIA</title>
 
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   
@@ -12,54 +12,44 @@
 
 <body>
 
-
-  <div class="container">
+  <div class="title">
   	<div class="row">
   	  <div class="col-md-12">
-  		  <h1>TRIVIA</h1>
+  		  <h1>GOAT TRIVIA</h1>
   	  </div>
   	</div>	
   </div>
 
+  <div class="start-game cointainer">
+  	<button id="start-button">Start Game</button>
+  </div>
+  
+  <!-- game play container -->
+  <div class="game-container">
+
   <div class="container">
   	<div class="row">
-  		<div class="col-md-12">
-  			<h2>All Done!</h2>
-  		</div>
-  	</div>
-  </div>
-
-    <div class="container">
-  	<div class="row">
-  		<div class="col-md-12">
-  			<h2>Correct Answers: </h2>
-  		</div>
-  	</div>
-  </div>
-
-    <div class="container">
-  	<div class="row">
-  		<div class="col-md-12">
-  			<h2>Incorrect Answers: </h2>
-  		</div>
-  	</div>
-  </div>
-
-    <div class="container">
-  	<div class="row">
-  		<div class="col-md-12">
-  			<h2>Unanswered: </h2>
-  		</div>
-  	</div>
-  </div>
-
+  	  <div class="col-md-12">
+  		  <h2>Time Remaining: <span id= "time-remaining">30</span></h2>
+  	  </div>
+  	</div>	
   
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<form id="my-form">
+  		<div class="container" id="question-container"></div>
+	</form>
+  </div>
 
-<script type="text/javascript">
+  <div class="end-container">
+  	<h1> Results:</h1>
+  	<h3> Correct Answers: <span id="correct-answers">0</span></h3>
+  	<h3> Incorrect Answers: <span: id="incorrect-answers">0</span:></h3>
+  	<h3> Unanswered Questions: <span id="unanswered">0</span></h3>
+  </div>
 
-</script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	
+  <script src="assets/javascript/app2.js"></script>
 
 
 
