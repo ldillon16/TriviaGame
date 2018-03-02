@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   //timer
-  var time = 30;
+  var time = 12;
   $("time-remaining").text(time);
 
   //setting variables
@@ -48,7 +48,6 @@ $(document).ready(function() {
   function startGame() {
   	stop();
   	intervalId = setInterval(decrement, 1000);
-    
   }
 
   function decrement() {
@@ -56,6 +55,7 @@ $(document).ready(function() {
       $("#time-remaining").html(time);
       if (time === 0) {
         stop();
+        gameScore();
         endGame();
         // alert("Time Up!");
   }}
@@ -72,22 +72,35 @@ $(document).ready(function() {
     clearInterval(intervalId);
     $(".game-container").hide();
     $(".end-container").show();
+      $("#unanswered").text(unansweredQuestions);
+      $("#correct-answers").text(correctAnswers);
+      $("#incorrect-answers").text(incorrectAnswers);
+    // gameScore();
 
   }
 
+function gameScore(){
+
+
   // getting checked values from radio buttons --there has to be a better way to do this...
   var Answer1 = $("input:radio[name='q1']:checked").val();
+  console.log(Answer1);
+  
   var Answer2 = $("input:radio[name='q2']:checked").val();
+  console.log(Answer2);
+  
   var Answer3 = $("input:radio[name='q3']:checked").val();
+  console.log(Answer3);
   var Answer4 = $("input:radio[name='q4']:checked").val();
+  console.log(Answer4);
   var Answer5 = $("input:radio[name='q5']:checked").val();
+  console.log(Answer5);
+
   // repeat for all five questions
 
-
-
-
 // if/else statements for each of the three end variables
-if (Answer1 = undefined) {
+
+if (Answer1 === undefined) {
   unansweredQuestions++;
 
 } else if 
@@ -98,18 +111,18 @@ if (Answer1 = undefined) {
   incorrectAnswers++;
 }
 
-if (Answer2 === null) {
+if (Answer2 === undefined) {
   unansweredQuestions++;
 
 } else if 
-  (Answer1 === "Upper teeth") {
+  (Answer2 === "Upper teeth") {
   correctAnswers++;
 
 } else {
   incorrectAnswers++;
 }
 
-if (Answer3 === null) {
+if (Answer3 === undefined) {
   unansweredQuestions++;
 
 } else if 
@@ -120,7 +133,7 @@ if (Answer3 === null) {
   incorrectAnswers++;
 }
 
-if (Answer4 === null) {
+if (Answer4 === undefined) {
   unansweredQuestions++;
 
 } else if 
@@ -131,7 +144,7 @@ if (Answer4 === null) {
   incorrectAnswers;
 }
 
-if (Answer5 === null) {
+if (Answer5 === undefined) {
   unansweredQuestions++;
 
 } else if 
@@ -142,12 +155,9 @@ if (Answer5 === null) {
   incorrectAnswers++;
 }
 
+};
 
 
 
-
-$("#unanswered").text(unansweredQuestions);
-$("#correct-answers").text(correctAnswers);
-$("#incorrect-answers").text(incorrectAnswers);
 
 })
