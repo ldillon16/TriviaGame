@@ -1,0 +1,55 @@
+body {
+	background: #99ffcc;
+}
+
+h1 {
+	text-align: center;
+	font-size: 320%;
+	margin-top: 40px;
+	/*padding-left: 120px;*/
+}
+
+img {
+	border: solid;
+}
+
+
+h3 {
+	/*padding-left: 100px;*/
+	margin-top: 20px;
+	text-align: center;
+
+}
+
+h2 {
+	text-align: center;
+}
+
+.answers {
+	/*padding-left: 100px;*/
+	/*margin-left: 10px;*/
+	text-align: center;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 40%;
+
+}
+
+.btn {
+	padding: 10px;
+	color: white;
+	background: slategray;
+	margin: auto;
+	margin-top: 30px;
+	width: 150px;
+
+}
+
+.col-md-9 {
+	margin: auto;
+}

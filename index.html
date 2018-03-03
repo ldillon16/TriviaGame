@@ -12,7 +12,7 @@
 
 <body>
 
-	  <div class="title">
+	<div class="title">
   	<div class="row">
   	  <div class="col-md-12">
   		  <h1>GOAT TRIVIA</h1>
@@ -21,22 +21,27 @@
   </div>
 
   <div class="start-game cointainer">
-  	<button id="start-button">Start Game</button>
+  	<button type="button" class="btn center" id="start-button">Start Game</button>
+  	<!-- <div class="row" id="goats1"><img src="assets/images/goats1.png"></div> -->
   </div>
   
   <!-- game play container -->
   <div class="game-container">
 
   <div class="container">
+  	
   	<div class="row">
-  	  <div class="col-md-12">
+  	
+  	  <div class="col-md-9 timer">
   		  <h2>Time Remaining: <span id= "time-remaining">30</span></h2>
   	  </div>
+  	
   	</div>	
   </div>
 	
 <div class="row">
-			<div class="col-md-12">
+	
+			<div class="col-md-9">
 				<div class="questions">
 					<h3> 1. How high can a goat jump?</h3>
 				</div>
@@ -51,7 +56,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-9">
 				<div class="questions">
 					<h3> 2. Goats are naturally missing which of the following body part?</h3>
 				</div>
@@ -66,7 +71,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-9">
 				<div class="questions">
 					<h3> 3. A group of goats is commonly known as what?</h3>
 				</div>
@@ -81,7 +86,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-9">
 				<div class="questions">
 					<h3> 4. By examining which physical feature can you determine a goat's age?</h3>
 				</div>
@@ -96,34 +101,43 @@
 		</div>
 
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-9">
 				<div class="questions">
 					<h3> 5. According to legend, goats were the first animals to discover which crop?</h3> 
 				</div>
 				<div class="answers">
 						<!-- correct answer: coffee -->
-					<input type="radio" name="q5" value="opium">Opium
-					<input type="radio" name="q5" value="peanuts">Peanuts
-					<input type="radio" name="q5" value="portabello mushrooms">Portabello mushrooms
-					<input type="radio" name="q5" value="coffee">Coffee
+					<input type="radio" name="q5" value="Opium">Opium
+					<input type="radio" name="q5" value="Peanuts">Peanuts
+					<input type="radio" name="q5" value="Portabello mushrooms">Portabello mushrooms
+					<input type="radio" name="q5" value="Coffee">Coffee
 				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-9">
+				<button id="submit-button" class="btn center">Submit</button>
 			</div>
 		</div>
  
   </div>
 
+  <!-- last page container -->
   <div class="end-container">
-  	<h1> Results:</h1>
+  	<h2> Results:</h2>
   	<h3> Correct Answers: <span id="correct-answers">0</span></h3>
   	<h3> Incorrect Answers: <span: id="incorrect-answers">0</span:></h3>
   	<h3> Unanswered Questions: <span id="unanswered">0</span></h3>
+  	<div class="row">
+  		<div class="col"><img id="goats1" class="center" src="assets/images/goats1.png"></div>
+  	</div>
   </div>
 
+  <!-- jQuery and javaScript links -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	
   <script src="assets/javascript/app.js"></script>
-
-
 
 </body>
 </html>

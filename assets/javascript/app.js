@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   //timer
-  var time = 12;
+  var time = 30;
   $("time-remaining").text(time);
 
   //setting variables
@@ -38,11 +38,19 @@ $(document).ready(function() {
   $(".end-container").hide();
 
 // Game functions 
+
   $("#start-button").on("click", function(){
     $(".start-game").hide();
     $(".game-container").show();
     startGame();
     console.log("start");
+  });
+
+  $("#submit-button").on("click", function(){
+    // stop();
+    gameScore();
+    endGame();
+
   });
     
   function startGame() {
@@ -76,19 +84,15 @@ $(document).ready(function() {
       $("#correct-answers").text(correctAnswers);
       $("#incorrect-answers").text(incorrectAnswers);
     // gameScore();
-
   }
 
 function gameScore(){
-
-
   // getting checked values from radio buttons --there has to be a better way to do this...
+  // repeat for all five questions
   var Answer1 = $("input:radio[name='q1']:checked").val();
   console.log(Answer1);
-  
   var Answer2 = $("input:radio[name='q2']:checked").val();
   console.log(Answer2);
-  
   var Answer3 = $("input:radio[name='q3']:checked").val();
   console.log(Answer3);
   var Answer4 = $("input:radio[name='q4']:checked").val();
@@ -96,9 +100,7 @@ function gameScore(){
   var Answer5 = $("input:radio[name='q5']:checked").val();
   console.log(Answer5);
 
-  // repeat for all five questions
-
-// if/else statements for each of the three end variables
+// if/else statements for each of the three end variables -- again, need to find a better way
 
 if (Answer1 === undefined) {
   unansweredQuestions++;
@@ -141,7 +143,7 @@ if (Answer4 === undefined) {
   correctAnswers++;
 
 } else {
-  incorrectAnswers;
+  incorrectAnswers++;
 }
 
 if (Answer5 === undefined) {
@@ -154,10 +156,6 @@ if (Answer5 === undefined) {
 } else {
   incorrectAnswers++;
 }
-
 };
-
-
-
 
 })
